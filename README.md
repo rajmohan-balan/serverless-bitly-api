@@ -28,13 +28,15 @@ $ make remove
 
 
 ## Develop ##
- 
-Run tests: 
+
+Uncomment the Offline plugin in serverless.yml 
 
 ```bash
 # using offline mode
 $ make offline
 ```
+
+Run tests: 
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/c12d379cf03c4c88ca44)
 

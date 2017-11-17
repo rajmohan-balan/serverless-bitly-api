@@ -33,12 +33,12 @@ resources:
       Properties:
         Name: ${self:service}
 		
-Outputs:
-  PublishLambdaFunctionArn:
-      Description: Lambda function which pushes the shopify json to Segment.
-      Value:
-        "Fn::GetAtt": [ PublishLambdaFunction, Arn ]
-      Export: {"Name": "${env:SERVICE_NAME}-${env:ENV}"}
+#Outputs:
+#  PublishLambdaFunctionArn:
+#      Description: Lambda function which pushes the shopify json to Segment.
+#      Value:
+#        "Fn::GetAtt": [ PublishLambdaFunction, Arn ]
+#      Export: {"Name": "${env:SERVICE_NAME}-${env:ENV}"}
 
-plugins:
-	- serverless-offline 
+#plugins:
+#	- serverless-offline 
