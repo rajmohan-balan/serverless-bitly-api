@@ -1,1 +1,1 @@
-# serverless-bitly-api
+# Serverless Bitly API
