@@ -35,7 +35,7 @@ resources:
 		
 #Outputs:
 #  PublishLambdaFunctionArn:
-#      Description: Lambda function which pushes the shopify json to Segment.
+#      Description: Lambda function which consumes post vars and responds with url.
 #      Value:
 #        "Fn::GetAtt": [ PublishLambdaFunction, Arn ]
 #      Export: {"Name": "${env:SERVICE_NAME}-${env:ENV}"}
