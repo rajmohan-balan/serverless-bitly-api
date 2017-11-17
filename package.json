@@ -1,0 +1,21 @@
+{
+  "name": "bitly-api",
+  "version": "1.0.0",
+  "description": "Consumes URL and Event and returns Result",
+  "main": "handler.js",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/vayateam/shopify2segment.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bitly": "^5.0.12"
+  },
+  "devDependencies": {
+    "serverless-offline": "^3.16.0"
+  }
+}

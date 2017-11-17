@@ -1,0 +1,44 @@
+service: ${env:SERVICE_NAME} 
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: ${env:ENV}
+  region: ap-southeast-2
+  stackTags:
+    FRAMEWORK: serverless
+  
+package:
+   exclude:
+    - .env
+    - .env*
+    - ./**
+   include:
+    - handler.js
+    - package.json
+    - node_modules/**
+
+functions:
+  run:
+    handler: handler.handler 
+    events:
+      - http: POST ${env:SERVICE_NAME}
+	  
+    environment:
+      BITLY_KEY: ${env:BITLY_KEY}
+	
+resources:
+	ApiGatewayRestApi:
+      Type: AWS::ApiGateway::RestApi
+      Properties:
+        Name: ${self:service}
+		
+Outputs:
+  PublishLambdaFunctionArn:
+      Description: Lambda function which pushes the shopify json to Segment.
+      Value:
+        "Fn::GetAtt": [ PublishLambdaFunction, Arn ]
+      Export: {"Name": "${env:SERVICE_NAME}-${env:ENV}"}
+
+plugins:
+	- serverless-offline 
