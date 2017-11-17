@@ -48,6 +48,6 @@ Test JSON:
 ```
 
 ```json
-{"url" : <A SHORT BITLY URL>}
+{"url" : <A_SHORT_BITLY_URL>}
 
 ```
