@@ -5,7 +5,7 @@
   "main": "handler.js",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/vayateam/shopify2segment.git"
+    "url": ""
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
